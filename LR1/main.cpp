@@ -8,8 +8,10 @@
 
 using namespace std;
 
-const string STARTED_MSG = "Вычисление началось\n";
-const string COMPLETED_MSG = "Вычисления выполнены\n";
+const string MSG_STARTED = "Поиск решения задачи в случае матрицы парных сравнений на множестве признаков (экспертов)\n\n";
+const string MSG_COMPLETED = "Результаты успешно сохранены в файл\n";
+
+const string MSG_READ_FILE = "Считывание данных из файла\n";
 
 const string ERR_OPTIMAL_NOT_FOUND = "Оптимальная альтернатива не найдена!\n";
 const string ERR_INPUT_NOT_FOUND = "Файл input.txt не найден\n";
@@ -221,6 +223,8 @@ int main()
 {
     setlocale(LC_ALL, "ru");
 
+    cout << MSG_STARTED;
+
     ifstream $in("input.txt");
     if (!$in.is_open()) {
         cout << ERR_INPUT_NOT_FOUND;
@@ -245,6 +249,8 @@ int main()
         }
     }
 
+    cout << MSG_READ_FILE;
+
     string $str, $row;
     int $i = 0, $j = 0, $k = -1;
     while (getline($in, $str)) {
@@ -268,8 +274,7 @@ int main()
         }
         $i++;
     }
-
-    cout << STARTED_MSG;
+    $in.close();
 
     /** Finding priorities for matrices */
     vector<float> $ePriority = priority($eMatrix, $eSize);
@@ -321,7 +326,8 @@ int main()
             ;
         }
     }
-    cout << COMPLETED_MSG;
+    $out.close();
+    cout << MSG_COMPLETED;
 
     return 0;
 }
