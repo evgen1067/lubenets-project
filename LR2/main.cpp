@@ -133,14 +133,14 @@ int main() {
 
 
     /** Search for the optimal strategy using the Wald criterion */
-    vector<pair<int, int>> res_wald;
+    vector<pair<int, int>> resWald;
     vector<int> WaldW;
 
     for (const auto &i: A) {
         WaldW.push_back(findMinMax(i, false));
     }
 
-    findAllMaximum(WaldW, res_wald, true);
+    findAllMaximum(WaldW, resWald, true);
 
     /** Search for the optimal strategy using the Savage criterion */
     vector<pair<int, int>> resSavage;
@@ -178,7 +178,6 @@ int main() {
     vector<pair<int, float>> resBayeslaplace;
     vector<float> math_exp;
 
-    // расчет математического ожидания каждой строки
     for (int i = 0; i < A.size(); i++) {
         math_exp.push_back(findMathExpectation(A[i]));
     }
@@ -208,9 +207,9 @@ int main() {
     }
 
     $out << "Ответ:" << endl << "по критерию Вальда: ";
-    if (!res_wald.empty())
-        $out << to_string(res_wald[0].second) + " при стратегии " +
-                to_string(res_wald[0].first) << endl;
+    if (!resWald.empty())
+        $out << to_string(resWald[0].second) + " при стратегии " +
+                to_string(resWald[0].first) << endl;
 
     $out << "по критерию Сэвиджа: ";
     if (!resSavage.empty())
