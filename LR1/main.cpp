@@ -22,27 +22,27 @@ const string ERR_EMPTY_STRING = "Строка пуста\n";
 /**
  * Greatest common divisor
  *
- * @param a
- * @param b
+ * @param $a
+ * @param $b
  *
  * @return greatest common divisor
  */
-int gcd(int a, int b) {
-    if (a % b == 0) return b;
-    if (b % a == 0) return a;
-    return a > b ? gcd(a % b, b) : gcd(a, b % a);
+int gcd(int $a, int $b) {
+    if ($a % $b == 0) return $b;
+    if ($b % $a == 0) return $a;
+    return $a > $b ? gcd($a % $b, $b) : gcd($a, $b % $a);
 }
 
 /**
  * Smallest common multiple
  *
- * @param a
- * @param b
+ * @param $a
+ * @param $b
  *
  * @return smallest common multiple
  */
-int lcm(int a, int b) {
-    return a * b / gcd(a, b);
+int lcm(int $a, int $b) {
+    return $a * $b / gcd($a, $b);
 }
 
 /**
@@ -303,25 +303,28 @@ int main()
         $out << ERR_OPTIMAL_NOT_FOUND;
     } else {
         $out << "Окончательные приоритеты альтернатив:\n";
-        for (int i = 0; i < $finalPriorities.size(); i++) {
+        for ($i = 0; $i < $finalPriorities.size(); $i++) {
             $out << "w"
-            + to_string(i + 1)
-            + " = "
-            + to_string(round($finalPriorities[i] * pow(10, 6)) / pow(10, 6))
-            + "; "
-        ;
+                + to_string($i + 1)
+                + " = "
+                + to_string(round($finalPriorities[$i] * pow(10, 6)) / pow(10, 6))
+                + ";"
+            ;
+            if ($finalPriorities.size() - 1 != $i) {
+                $out << " ";
+            }
         }
         $out << "\nОтвет: оптимальная альтернатива";
-        for (int i = 0; i < $optimalPriority.size(); i++) {
-            if (i > 0) {
+        for ($i = 0; $i < $optimalPriority.size(); $i++) {
+            if ($i > 0) {
                 $out << ", ";
             }
             $out << " x"
-                + to_string($optimalPriority[i].first)
+                + to_string($optimalPriority[$i].first)
                 + " с приоритетом w"
-                + to_string($optimalPriority[i].first)
+                + to_string($optimalPriority[$i].first)
                 + " = "
-                + to_string(round($optimalPriority[i].second * pow(10, 6)) / pow(10, 6))
+                + to_string(round($optimalPriority[$i].second * pow(10, 6)) / pow(10, 6))
                 + "."
             ;
         }

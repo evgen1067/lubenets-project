@@ -146,7 +146,7 @@ int main()
              << $i + 1
              << ") = "
              << $mu[$i]
-             << "; \n"
+             << ";\n"
         ;
     }
     $out << "\nОптимальная альтернатива - x"
@@ -155,7 +155,6 @@ int main()
          << $result.first
          << ") = "
          << $result.second
-         << "\n"
     ;
     $out.close();
 
