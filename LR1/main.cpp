@@ -8,16 +8,16 @@
 
 using namespace std;
 
-const string MSG_STARTED = "Поиск решения задачи в случае матрицы парных сравнений на множестве признаков (экспертов)\n\n";
-const string MSG_COMPLETED = "Результаты успешно сохранены в файл\n";
+const string MSG_STARTED = "Finding a solution to the problem in the case of a matrix of paired comparisons on a set of attributes (experts)\n\n";
+const string MSG_COMPLETED = "Results successfully saved to file\n";
 
-const string MSG_READ_FILE = "Считывание данных из файла\n";
+const string MSG_READ_FILE = "Reading data from a file\n";
 
-const string ERR_OPTIMAL_NOT_FOUND = "Оптимальная альтернатива не найдена!\n";
-const string ERR_INPUT_NOT_FOUND = "Файл input.txt не найден\n";
-const string ERR_OUTPUT_NOT_FOUND = "Файл output.txt не может быть открыт\n";
-const string ERR_ZERO_DENOMINATOR = "Знаменатель не может быть нулевым\n";
-const string ERR_EMPTY_STRING = "Строка пуста\n";
+const string ERR_OPTIMAL_NOT_FOUND = "No optimal alternative found!\n";
+const string ERR_INPUT_NOT_FOUND = "File input.txt not found\n";
+const string ERR_OUTPUT_NOT_FOUND = "The file output.txt cannot be opened\n";
+const string ERR_ZERO_DENOMINATOR = "Denominator cannot be zero\n";
+const string ERR_EMPTY_STRING = "The line is empty\n";
 
 /**
  * Greatest common divisor

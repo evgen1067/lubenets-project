@@ -9,12 +9,12 @@
 
 using namespace std;
 
-const string MSG_STARTED = "Определение оптимальных альтернатив с учетом всех нечетких отношений предпочтения и их важности\n\n";
-const string MSG_READ_FILE = "Считывание данных из файла\n";
-const string MSG_COMPLETED = "Результаты успешно сохранены в файл\n";
+const string MSG_STARTED = "Determination of optimal alternatives taking into account all fuzzy preference relations and their importance\n\n";
+const string MSG_READ_FILE = "Reading data from a file\n";
+const string MSG_COMPLETED = "Results successfully saved to file\n";
 
-const string ERR_INPUT_NOT_FOUND = "Файл input.txt не найден\n";
-const string ERR_OUTPUT_NOT_FOUND = "Файл output.txt не может быть открыт\n";
+const string ERR_INPUT_NOT_FOUND = "File input.txt not found\n";
+const string ERR_OUTPUT_NOT_FOUND = "The file output.txt cannot be opened\n";
 
 int main()
 {

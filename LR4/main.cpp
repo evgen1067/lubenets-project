@@ -9,14 +9,14 @@
 
 using namespace std;
 
-const string MSG_STARTED = "Поиск коэффициента конкордации для 7 экспертов и 10 альтернатив для каждой из групп.\n"
-                           "Определение группы 6 экспертов с наиболее согласованным мнением и коэффициент конкордации для неё.\n";
-const string MSG_COMPLETED = "Результаты успешно сохранены в файл\n";
+const string MSG_STARTED = "Search for the concordance coefficient for 7 experts and 10 alternatives for each group.\n"
+                           "Determination of the group of 6 experts with the most consistent opinion and the concordance coefficient for it.\n";
+const string MSG_COMPLETED = "Results successfully saved to file\n";
 
-const string MSG_READ_FILE = "Считывание данных из файла\n";
+const string MSG_READ_FILE = "Reading data from a file\n";
 
-const string ERR_INPUT_NOT_FOUND = "Файл input.txt не найден\n";
-const string ERR_OUTPUT_NOT_FOUND = "Файл output.txt не может быть открыт\n";
+const string ERR_INPUT_NOT_FOUND = "File input.txt not found\n";
+const string ERR_OUTPUT_NOT_FOUND = "The file output.txt cannot be opened\n";
 
 /**
  * Find coefficient Concordance

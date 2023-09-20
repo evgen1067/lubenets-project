@@ -9,13 +9,13 @@
 
 using namespace std;
 
-const string MSG_STARTED = "Поиск решения игры в условиях неопределенности\n";
-const string MSG_COMPLETED = "Результаты успешно сохранены в файл\n";
+const string MSG_STARTED = "Finding a solution to a game under conditions of uncertainty\n";
+const string MSG_COMPLETED = "Results successfully saved to file\n";
 
-const string MSG_READ_FILE = "Считывание данных из файла\n";
+const string MSG_READ_FILE = "Reading data from a file\n";
 
-const string ERR_INPUT_NOT_FOUND = "Файл input.txt не найден\n";
-const string ERR_OUTPUT_NOT_FOUND = "Файл output.txt не может быть открыт\n";
+const string ERR_INPUT_NOT_FOUND = "File input.txt not found\n";
+const string ERR_OUTPUT_NOT_FOUND = "The file output.txt cannot be opened\n";
 
 /**
  * Find math expectation
